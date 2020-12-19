@@ -1,0 +1,10 @@
+root = true
+
+[*]
+charset = utf-8
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+guidelines = 80
+guidelines_style = 1px dash green
+indent_size = 2
