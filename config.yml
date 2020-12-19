@@ -5,7 +5,6 @@ theme: "hugo-PaperMod"
 enableRobotsTXT: true
 
 params:
-  env: production
   description: "Jan Jones's blog"
   author: "Jan Jones"
 
