@@ -12,3 +12,17 @@ params:
     enabled: true
     imageUrl: "me.jpg"
     imageTitle: "Jan Jones's profile picture"
+
+  socialIcons:
+    - name: email
+      url: mailto:jan@knowledgepicker.com
+    - name: linkedin
+      url: https://www.linkedin.com/in/jan-jones-cz/
+    - name: github
+      url: https://github.com/jjonescz
+    - name: stackoverflow
+      url: https://stackoverflow.com/users/9080566/jan-jone%c5%a1
+    - name: twitter
+      url: https://twitter.com/jjonescz
+    - name: other
+      url: https://jan-a.tech/jan/
