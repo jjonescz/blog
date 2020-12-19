@@ -1,2 +1,3 @@
 baseURL: "https://janjones.me/"
 title: "Jan Jones"
+theme: "hugo-PaperMod"
