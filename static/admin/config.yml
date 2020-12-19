@@ -84,3 +84,15 @@ collections:
           - {label: 'Title', name: 'title', widget: 'string'}
           - {label: 'Summary', name: 'summary', widget: 'markdown', required: false}
           - {label: 'Body', name: 'body', widget: 'markdown'}
+          - label: 'Cover'
+            name: 'cover'
+            required: false
+            widget: object
+            fields:
+              - label: 'Image'
+                name: 'image'
+                widget: 'image'
+                allow_multiple: false
+                required: false
+              - {label: Caption, name: caption, widget: string, required: false}
+              - {label: Description for screen readers, name: alt, widget: string, required: false}
