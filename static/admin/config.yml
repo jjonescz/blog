@@ -37,8 +37,8 @@ collections:
           - label: 'Image'
             name: 'image'
             widget: 'image'
-            default: 'cover'
             allow_multiple: false
+            required: false
           - {label: Caption, name: caption, widget: string, required: false}
           - {label: Description for screen readers, name: alt, widget: string, required: false}
   - name: projects
@@ -70,8 +70,8 @@ collections:
           - label: 'Image'
             name: 'image'
             widget: 'image'
-            default: 'cover'
             allow_multiple: false
+            required: false
           - {label: Caption, name: caption, widget: string, required: false}
           - {label: Description for screen readers, name: alt, widget: string, required: false}
   - name: pages
