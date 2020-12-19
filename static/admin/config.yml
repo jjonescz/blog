@@ -16,8 +16,10 @@ collections:
     create: true
     media_folder: ''
     public_folder: ''
+    slug: '{{fields.slug}}'
     fields:
       - {label: 'Title', name: 'title', widget: 'string'}
+      - {label: 'Slug', name: 'slug', widget: 'string'}
       - {label: 'Publish date', name: 'date', widget: 'datetime'}
       - {label: 'Summary', name: 'summary', widget: 'markdown', required: false}
       - {label: 'Body', name: 'body', widget: 'markdown'}
@@ -49,8 +51,10 @@ collections:
     create: true
     media_folder: ''
     public_folder: ''
+    slug: '{{fields.slug}}'
     fields:
       - {label: 'Title', name: 'title', widget: 'string'}
+      - {label: 'Slug', name: 'slug', widget: 'string'}
       - {label: 'Publish date', name: 'date', widget: 'datetime'}
       - {label: 'Summary', name: 'summary', widget: 'markdown', required: false}
       - {label: 'Body', name: 'body', widget: 'markdown'}
