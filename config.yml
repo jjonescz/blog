@@ -8,3 +8,8 @@ params:
   env: production
   description: "Jan Jones's blog"
   author: "Jan Jones"
+
+  profileMode:
+    enabled: true
+    imageUrl: "me.jpg"
+    imageTitle: "Jan Jones's profile picture"
