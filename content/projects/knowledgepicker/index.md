@@ -1,7 +1,8 @@
 ---
 title: "KnowledgePicker"
-date: 2020-12-19T19:45:09+01:00
-author: ["Jan Jones"]
+date: 2020-09-21
+cover:
+  image: cover.png
 ---
 
 KnowledgePicker is a community-driven catalog of knowledge. It's awesome.
