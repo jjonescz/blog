@@ -12,6 +12,11 @@ params:
     enabled: true
     imageUrl: "me.jpg"
     imageTitle: "Jan Jones's profile picture"
+    buttons:
+      - name: Blog
+        url: /posts
+      - name: Projects
+        url: /projects
 
   socialIcons:
     - name: email
@@ -28,3 +33,18 @@ params:
       url: https://www.paypal.me/jjonescz
     - name: other
       url: https://jan-a.tech/jan/
+
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: /
+      weight: 10
+    - identifier: blog
+      name: Blog
+      url: /posts
+      weight: 20
+    - identifier: projects
+      name: Projects
+      url: /projects
+      weight: 30
