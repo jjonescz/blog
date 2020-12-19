@@ -3,6 +3,8 @@ backend:
 publish_mode: editorial_workflow
 media_folder: '/static/'
 public_folder: '/'
+editor:
+  preview: false
 collections:
   - name: posts
     label: Posts
