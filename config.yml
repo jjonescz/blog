@@ -24,5 +24,7 @@ params:
       url: https://stackoverflow.com/users/9080566/jan-jone%c5%a1
     - name: twitter
       url: https://twitter.com/jjonescz
+    - name: paypal
+      url: https://www.paypal.me/jjonescz
     - name: other
       url: https://jan-a.tech/jan/
