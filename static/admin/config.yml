@@ -9,6 +9,7 @@ collections:
     label_singular: Post
     folder: 'content/posts'
     path: '{{slug}}/index'
+    create: true
     media_folder: ''
     public_folder: ''
     fields:
@@ -41,6 +42,7 @@ collections:
     label_singular: Project
     folder: 'content/projects'
     path: '{{slug}}/index'
+    create: true
     media_folder: ''
     public_folder: ''
     fields:
