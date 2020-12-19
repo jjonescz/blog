@@ -1,5 +1,7 @@
 backend:
   name: git-gateway
+local_backend:
+  url: http://localhost:9011/api/v1
 publish_mode: editorial_workflow
 media_folder: '/static/'
 public_folder: '/'
