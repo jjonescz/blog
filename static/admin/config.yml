@@ -1,0 +1,80 @@
+backend:
+  name: git-gateway
+publish_mode: editorial_workflow
+media_folder: '/static/'
+public_folder: '/'
+collections:
+  - name: posts
+    label: Posts
+    label_singular: Post
+    folder: 'content/posts'
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
+    fields:
+      - {label: 'Title', name: 'title', widget: 'string'}
+      - {label: 'Publish date', name: 'date', widget: 'datetime'}
+      - {label: 'Summary', name: 'summary', widget: 'markdown', required: false}
+      - {label: 'Body', name: 'body', widget: 'markdown'}
+      - label: 'Tags'
+        name: 'tags'
+        required: false
+        widget: 'list'
+      - label: 'Categories'
+        name: 'categories'
+        required: false
+        widget: 'list'
+      - label: 'Cover'
+        name: 'cover'
+        required: false
+        widget: object
+        fields:
+          - label: 'Image'
+            name: 'image'
+            widget: 'image'
+            default: 'cover'
+            allow_multiple: false
+          - {label: Caption, name: caption, widget: string, required: false}
+          - {label: Description for screen readers, name: alt, widget: string, required: false}
+  - name: projects
+    label: Projects
+    label_singular: Project
+    folder: 'content/projects'
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
+    fields:
+      - {label: 'Title', name: 'title', widget: 'string'}
+      - {label: 'Publish date', name: 'date', widget: 'datetime'}
+      - {label: 'Summary', name: 'summary', widget: 'markdown', required: false}
+      - {label: 'Body', name: 'body', widget: 'markdown'}
+      - label: 'Tags'
+        name: 'tags'
+        required: false
+        widget: 'list'
+      - label: 'Categories'
+        name: 'categories'
+        required: false
+        widget: 'list'
+      - label: 'Cover'
+        name: 'cover'
+        required: false
+        widget: object
+        fields:
+          - label: 'Image'
+            name: 'image'
+            widget: 'image'
+            default: 'cover'
+            allow_multiple: false
+          - {label: Caption, name: caption, widget: string, required: false}
+          - {label: Description for screen readers, name: alt, widget: string, required: false}
+  - name: pages
+    label: 'Pages'
+    files:
+      - file: 'content/stack.md'
+        label: 'Stack'
+        name: 'stack'
+        fields:
+          - {label: 'Title', name: 'title', widget: 'string'}
+          - {label: 'Summary', name: 'summary', widget: 'markdown', required: false}
+          - {label: 'Body', name: 'body', widget: 'markdown'}
