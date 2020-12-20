@@ -9,7 +9,6 @@ tags:
   - Hugo
   - Netlify
   - Netlify CMS
-  - ""
 categories:
   - This Blog
 cover:
@@ -47,6 +46,7 @@ For my blog, I use the beautiful [PaperMod](https://github.com/adityatelange/hug
 To create a blog similar to mine, you can either fork [my repository](https://github.com/jjonescz/blog), or follow these steps:
 
 1. [Install Hugo](https://gohugo.io/getting-started/installing).
+
 2. Create new Hugo site (see [Hugo Quick Start guide](https://gohugo.io/getting-started/quick-start/)):
 
    ```shell
@@ -54,13 +54,14 @@ To create a blog similar to mine, you can either fork [my repository](https://gi
    ```
 
 3. Add the site to Git (`cd blog`, `git init`, ...).
+
 4. Add PaperMod theme (see [PaperMod Installation guide](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-installation/)):
 
    ```shell
    git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/hugo-PaperMod
    ```
 
-5. Configure your Hugo website and PaperMod theme. Add [config.yml](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-installation/#sample-configyml) file. You can start with something like [this](https://github.com/jjonescz/blog/blob/96b4ea6e03bb2509e577af82defd888354da4e38/config.yml):
+5. Configure your Hugo website and PaperMod theme&mdash;add [config.yml](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-installation/#sample-configyml) file. You can start with something like [this](https://github.com/jjonescz/blog/blob/96b4ea6e03bb2509e577af82defd888354da4e38/config.yml):
 
    ```yml
    baseURL: "https://janjones.me/"
@@ -75,6 +76,7 @@ To create a blog similar to mine, you can either fork [my repository](https://gi
    ```
 
 7. Now you can see your website at <http://localhost:1313>.
+
 8. Configure Netlify deployment. Netlify looks for [`netlify.toml` file](https://docs.netlify.com/configure-builds/file-based-configuration/) in root of your repository. This is a good starting point for Hugo:
 
    ```toml
@@ -113,9 +115,9 @@ To create a blog similar to mine, you can either fork [my repository](https://gi
      force = true
    ```
 
-9. You can add new post using Hugo commmand:
+9. You can add new post using Hugo command:
 
-   ```
+   ```shell
    hugo new posts/my-first-post/index.md
    ```
 
@@ -131,7 +133,7 @@ My blog obviously contains code snippets. To be readable they need to be highlig
 
 Highlight.js is enabled in PaperMod in [`layout/partials/footer.html` file](https://github.com/adityatelange/hugo-PaperMod/blob/b4933eadd65f922cad20e5f9da68ef645564ebfe/layouts/partials/footer.html#L17-L26). To customize templates in Hugo, you can [override these layout files](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-how-to/#override-theme-template). So, I have created new [`layout/partials/footer.html` file](https://github.com/jjonescz/blog/blob/16a10b59fe8986a5c3d774d621622f5d721f0d18/layouts/partials/footer.html) in my repository with the Highlight.js snippet removed.
 
-(I know this is not ideal because it leads to code duplication and you have to manually update the copied layout file whenever you update the theme and the original file changes to ensure consistency. However, this is the only way I know these things can be done in Hugo unless the theme itself provides configuration variables or more fine-grained template files to customize everything. The very popular Hugo template [wowchemy](https://wowchemy.com/), which I have also used previously, has very worked out customization but I still had to sometimes copy whole layout files to modify just fraction of them.)
+(I know this is not ideal because it leads to code duplication and you have to manually update the copied layout file whenever you update the theme and the original file changes to ensure consistency. However, this is the only way I know these things can be done in Hugo unless the theme itself provides configuration variables or more fine-grained template files to customize everything. The very popular Hugo template [wowchemy](https://wowchemy.com/), which I have also used previously, has very worked-out customization but I still had to sometimes copy whole layout files to modify just fraction of them.)
 
 ### Footer customization
 
@@ -139,28 +141,28 @@ Next I have added [RSS link](https://github.com/jjonescz/blog/blob/026088ac7a51e
 
 ## Bonus: Headless CMS
 
-Maybe you are creating a blog for someone who doesn't know Markdown or you just want to write your blog posts in web browser without the need to open your Markdown editor and terminal for Git (as I think might be my case). And you still want to host your blog for free on GitHub+Netlify or similar combo. That is where [headless CMS](https://jamstack.org/headless-cms/) comes to the rescue.
+Maybe you are creating a blog for someone who doesn't know Markdown or you just want to write your blog posts in web browser without the need to open your Markdown editor and terminal for Git (as I think might be my case sometimes). And you still want to host your blog for free on GitHub+Netlify or similar combo. That is where [headless CMS](https://jamstack.org/headless-cms/) comes to the rescue.
 
-I will describe [Netlify CMS](https://www.netlifycms.org/) (it was a natural choice for me since I host the website on Netlify). It allows you to edit your pages in user-friendly interface with rich text WYSIWYG editor, image selector etc.
+I will describe [Netlify CMS](https://www.netlifycms.org/) (it was a natural choice for me since I host the website on Netlify). It allows you to edit your pages in user-friendly interface with rich text WYSIWYG editor, image selectors, etc.
 
 ![Netlify CMS screenshot](netlify-cms.jpg)
 
 To install Netlify CMS, you just add `config.yml` and `index.html` files to [`static/admin` folder](https://github.com/jjonescz/blog/tree/026088ac7a51ec6c24f3c77115f6fc96393f16ec/static/admin), enable [Netlify Identity](https://docs.netlify.com/visitor-access/identity/) and are good to go. The whole process is described for example in the [official Netlify docs](https://www.netlifycms.org/docs/hugo/#getting-started-with-netlify-cms).
 
-Netlify CMS is very generic and can work with many static site generators. How the editor emits files that your static site generator understands is controlled by [`config.yml` file](https://www.netlifycms.org/docs/configuration-options/). For very popular themes like [wowchemy](https://wowchemy.com/), there is this configuration [available](https://github.com/wowchemy/wowchemy-hugo-modules/blob/6c434e6de205ab5877dd4879e225e995ca703499/netlify-cms-academic/static/admin/config.yml) with prefilled decent defaults, so you can just start using it. You can use this or some other similar config for most Hugo themes although you might need to slightly modify some properties here and there since every theme might use different ones (although the most important like Title and Body are always the same).
+Netlify CMS is very generic and can work with many static site generators. How the editor emits files that your static site generator understands is controlled by [`config.yml` file](https://www.netlifycms.org/docs/configuration-options/). For very popular themes like [wowchemy](https://wowchemy.com/), there is this configuration [available](https://github.com/wowchemy/wowchemy-hugo-modules/blob/6c434e6de205ab5877dd4879e225e995ca703499/netlify-cms-academic/static/admin/config.yml) with prefilled decent defaults, so you can just start using it. You can use this or some other similar config for most Hugo themes although you might need to slightly modify some properties here and there since every theme might use different ones (although the most important ones like Title and Body are always the same).
 
 I will describe my `config.yml` file for PaperMod theme I created for this blog. It is quite long (because it is repetitive) so I won't include it here, but you can find the [version](https://github.com/jjonescz/blog/blob/026088ac7a51ec6c24f3c77115f6fc96393f16ec/static/admin/config.yml) I will be talking about on my GitHub.
 
 I have [enabled](https://github.com/jjonescz/blog/blob/026088ac7a51ec6c24f3c77115f6fc96393f16ec/static/admin/config.yml#L5) `editorial_workflow` mode which means that whenever I create new blog post, a PR is opened, can be reviewed and "accepted" in separate stages (which can be done through Netlify CMS UI, as well). Only when it is accepted, it gets merged and the blog post is publicly visible. I do this because I like to have my posts reviewed by another person before I publish them and GitHub PR reviews are great for that. This means I don't use standard Hugo's [drafts](https://gohugo.io/getting-started/usage/#draft-future-and-expired-content), but if you don't enable `editorial_workflow` mode, you should definitely [enable drafts](https://github.com/wowchemy/wowchemy-hugo-modules/blob/6c434e6de205ab5877dd4879e225e995ca703499/netlify-cms-academic/static/admin/config.yml#L156-L160), so that you can save your in-progress blog posts into your repository without making them visible to everyone until they are ready.
 
-I have also [disabled](https://github.com/jjonescz/blog/blob/026088ac7a51ec6c24f3c77115f6fc96393f16ec/static/admin/config.yml#L8-L9) instant previews because they don't work very well until custom CSS is provided to Netlify CMS (otherwise it displays the preview as unstyled HTML which doesn't look very well and sometimes even looks very bad with oversized images, etc.).
+I have also [disabled](https://github.com/jjonescz/blog/blob/026088ac7a51ec6c24f3c77115f6fc96393f16ec/static/admin/config.yml#L8-L9) instant previews because they don't work very well until custom CSS is provided to Netlify CMS (I plan to do that in the future).
 
-I have made slug (title of the post that is visible in the URL of the page) [customizable](https://github.com/jjonescz/blog/blob/026088ac7a51ec6c24f3c77115f6fc96393f16ec/static/admin/config.yml#L19), but you definitely don't need to do that&mdash;it will automatically convert your titles to URL-safe strings.
+I have made slug (title of the post that is visible in the URL of the page) [customizable](https://github.com/jjonescz/blog/blob/026088ac7a51ec6c24f3c77115f6fc96393f16ec/static/admin/config.yml#L19), but you definitely don't need to do that&mdash;Netlify CMS will automatically convert your titles to URL-safe strings.
 
 And finally, I have [used](https://github.com/jjonescz/blog/blob/026088ac7a51ec6c24f3c77115f6fc96393f16ec/static/admin/config.yml#L17-L18) a [preview feature](https://www.netlifycms.org/docs/beta-features/#folder-collections-media-and-public-folder) of Netlify CMS to ensure images (including cover image of every post) are uploaded alongside the blog post's Markdown instead of global media folder. There is no particular reason to not use the global folder, I just wanted to have posts and their images more self-contained.
 
 ## Conclusion
 
-I have shown you how I have created my blog (hosted for free on Netlify and GitHub). It consists of simple (yet SEO-ready) static HTML and CSS files (which is everything a blog needs). Once configured, it can be even managed by non-programmer thanks to Netlify CMS.
+I have shown you how I created my blog (hosted for free on Netlify and GitHub). It consists of simple (yet SEO-friendly) static HTML and CSS files (which is everything a fast blog needs). Once configured, it can be even managed by non-programmer thanks to Netlify CMS.
 
 As I continue adding more functionality to the blog (search, comments, PWA, LaTeX math, etc.), I plan to write more detailed blog posts about each addition. Until I add comments, let me know what you think about this post [on Reddit](https://www.reddit.com/user/jjones_cz/comments/kgzu90/fast_static_blog_with_headless_cms_jan_jones/).
