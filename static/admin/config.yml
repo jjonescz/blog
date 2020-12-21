@@ -48,6 +48,7 @@ collections:
             required: false
           - {label: Caption, name: caption, widget: string, required: false}
           - {label: Description for screen readers, name: alt, widget: string, required: false}
+          - {label: Relative, name: relative, widget: hidden, default: true}
   - name: projects
     label: Projects
     label_singular: Project
@@ -88,6 +89,7 @@ collections:
             required: false
           - {label: Caption, name: caption, widget: string, required: false}
           - {label: Description for screen readers, name: alt, widget: string, required: false}
+          - {label: Relative, name: relative, widget: hidden, default: true}
   - name: pages
     label: Pages
     label_singular: Page
@@ -126,3 +128,4 @@ collections:
             required: false
           - {label: Caption, name: caption, widget: string, required: false}
           - {label: Description for screen readers, name: alt, widget: string, required: false}
+          - {label: Relative, name: relative, widget: hidden, default: true}

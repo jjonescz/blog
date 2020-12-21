@@ -14,6 +14,7 @@ categories:
 cover:
   image: cover.png
   alt: Hugo + Netlify + Netlify CMS
+  relative: true
 ShowToc: true
 TocOpen: true
 ---
