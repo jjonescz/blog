@@ -25,6 +25,7 @@ collections:
       - {label: 'Body', name: 'body', widget: 'markdown'}
       - {label: 'Show ToC', name: 'ShowToc', widget: boolean, default: true, required: false}
       - {label: 'Open ToC', name: 'TocOpen', widget: boolean, default: true, required: false}
+      - {label: 'Hide meta', name: 'hideMeta', widget: boolean, required: false}
       - {label: 'Disable share', name: 'disableShare', widget: boolean, required: false}
       - {label: 'Disable reading time', name: 'disableReadingTime', widget: boolean, required: false}
       - label: 'Tags'
@@ -64,6 +65,7 @@ collections:
       - {label: 'Body', name: 'body', widget: 'markdown'}
       - {label: 'Show ToC', name: 'ShowToc', widget: boolean, required: false}
       - {label: 'Open ToC', name: 'TocOpen', widget: boolean, required: false}
+      - {label: 'Hide meta', name: 'hideMeta', widget: boolean, required: false}
       - {label: 'Disable share', name: 'disableShare', widget: boolean, default: true, required: false}
       - {label: 'Disable reading time', name: 'disableReadingTime', widget: boolean, default: true, required: false}
       - label: 'Tags'
@@ -87,24 +89,40 @@ collections:
           - {label: Caption, name: caption, widget: string, required: false}
           - {label: Description for screen readers, name: alt, widget: string, required: false}
   - name: pages
-    label: 'Pages'
-    files:
-      - file: 'content/stack.md'
-        label: 'Stack'
-        name: 'stack'
+    label: Pages
+    label_singular: Page
+    folder: 'content'
+    path: '{{slug}}'
+    create: true
+    slug: '{{fields.slug}}'
+    fields:
+      - {label: 'Title', name: 'title', widget: 'string'}
+      - {label: 'Slug', name: 'slug', widget: 'string'}
+      - {label: 'Publish date', name: 'date', widget: 'datetime'}
+      - {label: 'Summary', name: 'summary', widget: 'markdown', required: false}
+      - {label: 'Body', name: 'body', widget: 'markdown'}
+      - {label: 'Show ToC', name: 'ShowToc', widget: boolean, required: false}
+      - {label: 'Open ToC', name: 'TocOpen', widget: boolean, required: false}
+      - {label: 'Hide meta', name: 'hideMeta', widget: boolean, default: true, required: false}
+      - {label: 'Disable share', name: 'disableShare', widget: boolean, required: false}
+      - {label: 'Disable reading time', name: 'disableReadingTime', widget: boolean, required: false}
+      - label: 'Tags'
+        name: 'tags'
+        required: false
+        widget: 'list'
+      - label: 'Categories'
+        name: 'categories'
+        required: false
+        widget: 'list'
+      - label: 'Cover'
+        name: 'cover'
+        required: false
+        widget: object
         fields:
-          - {label: 'Title', name: 'title', widget: 'string'}
-          - {label: 'Summary', name: 'summary', widget: 'markdown', required: false}
-          - {label: 'Body', name: 'body', widget: 'markdown'}
-          - label: 'Cover'
-            name: 'cover'
+          - label: 'Image'
+            name: 'image'
+            widget: 'image'
+            allow_multiple: false
             required: false
-            widget: object
-            fields:
-              - label: 'Image'
-                name: 'image'
-                widget: 'image'
-                allow_multiple: false
-                required: false
-              - {label: Caption, name: caption, widget: string, required: false}
-              - {label: Description for screen readers, name: alt, widget: string, required: false}
+          - {label: Caption, name: caption, widget: string, required: false}
+          - {label: Description for screen readers, name: alt, widget: string, required: false}
