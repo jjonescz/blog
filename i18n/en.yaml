@@ -1,0 +1,4 @@
+- id: read_time
+  translation:
+    one : "1 min to read"
+    other: "{{ .Count }} min to read"

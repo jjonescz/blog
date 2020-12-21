@@ -9,6 +9,7 @@ params:
   author: "Jan Jones"
 
   ShowShareButtons: true
+  ShowReadingTime: true
 
   profileMode:
     enabled: true
