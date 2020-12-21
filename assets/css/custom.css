@@ -1,0 +1,17 @@
+/* Make profile subtitle links underlined (copied from `footer.css`). */
+.profile_inner > span a {
+  color: inherit;
+  border-bottom: 1px solid var(--secondary)
+}
+.profile_inner > span a:hover {
+  border-bottom: 1px solid var(--primary)
+}
+.profile_inner > span a:hover {
+    color: var(--primary)
+}
+
+/* Add bottom margin to profile subtitle. */
+.profile_inner > span {
+  display: block;
+  padding: 0 0 12px 0 !important;
+}
