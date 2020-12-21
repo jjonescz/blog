@@ -1,1 +1,1 @@
-<a href="{{ partial "source_link.html" (dict "Page" . "View" "commits") }}">updated {{ .Lastmod.Format (default "January 2, 2006" .Site.Params.DateFormat) }}</a>
+<a href="{{ partial "source_link.html" (dict "Page" . "View" "commits") }}" title="View history">updated {{ .Lastmod.Format (default "January 2, 2006" .Site.Params.DateFormat) }}</a>
