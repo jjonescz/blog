@@ -22,3 +22,8 @@ nested in lists). */
   margin-bottom: var(--content-gap) !important;
 }
 
+/* Force space between "Search" text and icon on search page when HTML
+minification is enabled. */
+.page-header > h1 > svg {
+  margin-left: 1rem;
+}
