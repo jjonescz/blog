@@ -1,0 +1,10 @@
+{{- $hash := "master" -}}
+{{- $view := .View | default "blob" -}}
+{{- with .Page.GitInfo -}}
+{{- $hash = .Hash -}}
+{{- end -}}
+{{- $path := "" -}}
+{{- with .Page.File.Path -}}
+{{- $path = (path.Join (printf "/%s/" $view) $hash "content" .) -}}
+{{- end -}}
+{{- .Page.Site.Params.repo -}}{{- $path -}}
