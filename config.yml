@@ -10,6 +10,8 @@ params:
 
   repo: https://github.com/jjonescz/blog
 
+  images: ["cover.png"] # used as `og:image` and `twitter:image`
+
   ShowShareButtons: true
   ShowReadingTime: true
 
