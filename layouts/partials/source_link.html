@@ -4,7 +4,9 @@
 {{- $hash = .Hash -}}
 {{- end -}}
 {{- $path := "" -}}
-{{- with .Page.File.Path -}}
+{{- with .Page.File -}}
+{{- with .Path -}}
 {{- $path = (path.Join (printf "/%s/" $view) $hash "content" .) -}}
+{{- end -}}
 {{- end -}}
 {{- .Page.Site.Params.repo -}}{{- $path -}}
