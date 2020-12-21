@@ -25,6 +25,8 @@ collections:
       - {label: 'Body', name: 'body', widget: 'markdown'}
       - {label: 'Show ToC', name: 'ShowToc', widget: boolean, default: true, required: false}
       - {label: 'Open ToC', name: 'TocOpen', widget: boolean, default: true, required: false}
+      - {label: 'Disable share', name: 'disableShare', widget: boolean, required: false}
+      - {label: 'Disable reading time', name: 'disableReadingTime', widget: boolean, required: false}
       - label: 'Tags'
         name: 'tags'
         required: false
@@ -60,7 +62,10 @@ collections:
       - {label: 'Publish date', name: 'date', widget: 'datetime'}
       - {label: 'Summary', name: 'summary', widget: 'markdown', required: false}
       - {label: 'Body', name: 'body', widget: 'markdown'}
+      - {label: 'Show ToC', name: 'ShowToc', widget: boolean, required: false}
+      - {label: 'Open ToC', name: 'TocOpen', widget: boolean, required: false}
       - {label: 'Disable share', name: 'disableShare', widget: boolean, default: true, required: false}
+      - {label: 'Disable reading time', name: 'disableReadingTime', widget: boolean, default: true, required: false}
       - label: 'Tags'
         name: 'tags'
         required: false
