@@ -15,3 +15,10 @@
   display: block;
   padding: 0 0 12px 0 !important;
 }
+
+/* Preserve margin after list items (also adds proper space before code blocks
+nested in lists). */
+.post-content li p {
+  margin-bottom: var(--content-gap) !important;
+}
+
