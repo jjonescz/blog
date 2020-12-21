@@ -12,6 +12,12 @@
 {{ $scratch.Add "meta" (slice .)}}
 {{end}}
 
+{{- if not (.Lastmod.Equal .Date) -}}
+{{- with (partial "updated.html" .) -}}
+{{- $scratch.Add "meta" . -}}
+{{- end -}}
+{{- end -}}
+
 {{- with ($scratch.Get "meta")}}
 {{- delimit . "&nbsp;·&nbsp;"}}
 {{- end }}
