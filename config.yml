@@ -8,6 +8,8 @@ params:
   description: "Jan Jones's blog"
   author: "Jan Jones"
 
+  repo: https://github.com/jjonescz/blog
+
   ShowShareButtons: true
   ShowReadingTime: true
 
