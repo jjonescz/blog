@@ -8,6 +8,8 @@ params:
   description: "Jan Jones's blog"
   author: "Jan Jones"
 
+  ShowShareButtons: true
+
   profileMode:
     enabled: true
     imageUrl: "me.jpg"
