@@ -115,13 +115,15 @@ To create a blog similar to mine, you can either fork [my repository](https://gi
      force = true
    ```
 
-9. You can add new post using Hugo command:
+9. By default you get random third-level domain from Netlify (e.g., `something-random.netlify.app`) where your app is available as soon as you push it to `master` and it gets built on Netlify (which is usually very fast with Hugo). You can change it to something more appropriate in your site's settings, although it will still contain `netlify.app` suffix (so you get something like `my-cool-blog.netlify.app`). However, you can also buy your own second-level domain (e.g., `my-cool-blog.com`). I recommend doing that directly through Netlify, it is the easiest way and you also get free SSL certificate (for HTTPS) immediately setup. Go to [your Netlify account](https://app.netlify.com/), select your site, click on “Domain settings” > “Add custom domain” and Netlify will guide you through the purchase (or transferring existing domain).
 
-   ```shell
-   hugo new posts/my-first-post/index.md
-   ```
+10. You can add new post using Hugo command:
 
-   Alternatively, you can create the Markdown file yourself, but don't forget to add [front matter](https://gohugo.io/content-management/front-matter/) with useful properties like title and publication date.
+    ```shell
+    hugo new posts/my-first-post/index.md
+    ```
+
+    Alternatively, you can create the Markdown file yourself, but don't forget to add [front matter](https://gohugo.io/content-management/front-matter/) with useful properties like title and publication date.
 
 ## Customizations
 
