@@ -5,6 +5,8 @@
   <span>&copy; {{ now.Year }} <a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a></span>
   {{- end }}
   <span>&middot;</span>
+  <span><a href="{{ .Site.BaseURL }}license">License</a></span>
+  <span>&middot;</span>
   <span><a href="{{ .Site.RSSLink }}" type="application/rss+xml">RSS</a></span>
   <span>&middot;</span>
   <span><a href="{{ .Site.BaseURL }}stack">Stack</a></span>
