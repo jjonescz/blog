@@ -5,11 +5,11 @@
   <span>&copy; {{ now.Year }} <a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a></span>
   {{- end }}
   <span>&middot;</span>
-  <span><a href="{{ .Site.BaseURL }}license">License</a></span>
+  <span><a href="{{ "license/" | relLangURL }}">License</a></span>
   <span>&middot;</span>
   <span><a href="{{ .Site.RSSLink }}" type="application/rss+xml">RSS</a></span>
   <span>&middot;</span>
-  <span><a href="{{ .Site.BaseURL }}stack">Stack</a></span>
+  <span><a href="{{ "stack/" | relLangURL }}">Stack</a></span>
 </footer>
 <button class="top-link" id="top-link" type="button" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
