@@ -14,6 +14,8 @@ categories:
 cover:
   image: cover.png
   alt: Hugo + Netlify + Netlify CMS
+ShowToc: true
+TocOpen: true
 ---
 This is the very first blog post on my blog. I think it is symbolic to write about the blog itself. More precisely, about its *tech stack*.
 
