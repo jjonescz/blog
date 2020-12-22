@@ -12,6 +12,9 @@ params:
 
   images: ["cover.png"] # used as `og:image` and `twitter:image`
 
+  # must contain `%s` where relative page URL will be injected
+  trackingPixel: https://janjones.goatcounter.com/count?p=%s
+
   ShowShareButtons: true
   ShowReadingTime: true
 

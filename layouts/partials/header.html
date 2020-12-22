@@ -139,3 +139,7 @@
         </ul>
     </nav>
 </header>
+
+{{- if and hugo.IsProduction .Site.Params.trackingPixel -}}
+<img src="{{ printf .Site.Params.trackingPixel .RelPermalink }}">
+{{- end -}}
