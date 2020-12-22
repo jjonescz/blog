@@ -1,5 +1,10 @@
 {{- define "main" -}}
 
-{{- partial "list.html" . -}}
+{{/*
+  HACK: `.Pages` variable doesn't work (only sometimes, which is really weird),
+  so we find them manually.
+*/}}
+{{ $pages := where (where site.Pages "Kind" "term") "Type" .Type }}
+{{- partial "list.html" (dict "ctx" . "Pages" $pages) -}}
 
 {{- end -}}
