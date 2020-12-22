@@ -27,3 +27,14 @@ minification is enabled. */
 .page-header > h1 > svg {
   margin-left: 1rem;
 }
+
+/* Improve styles of tags, categories, ... (taxonomies) below each post. */
+.post-tags-container {
+  margin-bottom: 12px;
+}
+.post-tags-container > a {
+  margin-inline-end: 6px;
+}
+.post-tags {
+  display: inline-block;
+}
