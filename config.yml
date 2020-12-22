@@ -25,9 +25,9 @@ params:
     subtitle: "Follow me on [Twitter](https://twitter.com/jjonescz) or [Reddit](https://www.reddit.com/user/jjones_cz/) for new posts."
     buttons:
       - name: Blog
-        url: /posts
+        url: /posts/
       - name: Projects
-        url: /projects
+        url: /projects/
 
   socialIcons:
     - name: email
@@ -53,11 +53,11 @@ menu:
       weight: 10
     - identifier: blog
       name: Blog
-      url: /posts
+      url: /posts/
       weight: 20
     - identifier: projects
       name: Projects
-      url: /projects
+      url: /projects/
       weight: 30
 
 outputs:
