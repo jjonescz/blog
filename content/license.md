@@ -4,5 +4,5 @@ hideMeta: true
 disableShare: true
 ---
 
-Content of this blog (text in Markdown files) is Copyright Jan Joneš &copy; 2020, All Rights Reserved.
-[Source code](https://github.com/jjonescz/blog) of this blog and code fragments are licensed under [MIT License](https://github.com/jjonescz/blog/LICENSE).
+Content of this blog (text in Markdown files except code fragments) is Copyright Jan Joneš &copy; 2020, All Rights Reserved.
+[Source code](https://github.com/jjonescz/blog) of this blog (except Markdown files) and code fragments anywhere are licensed under [MIT License](https://github.com/jjonescz/blog/LICENSE).

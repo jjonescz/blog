@@ -9,5 +9,4 @@ See [stack](content/stack.md) for more details about the code.
 
 ## License
 
-Content of this blog (text in Markdown files) is Copyright Jan Joneš &copy; 2020, All Rights Reserved.
-Source code of this blog and code fragments are licensed under [MIT License](LICENSE).
+See [License page](content/license.md).
