@@ -14,6 +14,11 @@
 
 {{- $pages := $.Pages | default (union .RegularPages .Sections) }}
 
+{{ if and (not $.StartLevel) (eq .Kind "term") }}
+{{ with site.GetPage (printf "/%s" .Data.Plural) }}
+<a href="{{ .RelPermalink }}">{{- .LinkTitle -}}</a>
+{{ end }}
+{{ end }}
 {{- if not .IsHome | and $title | and $pages }}
 <header class="page-header">
   {{- printf "<h%d>" $headingLevel | safeHTML -}}{{ $title }}{{- printf "</h%d>" $headingLevel | safeHTML -}}

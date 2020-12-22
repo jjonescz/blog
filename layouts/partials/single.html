@@ -50,7 +50,7 @@
         {{- $page_terms := $.GetTerms $tax_term -}}
         {{ if $page_terms }}
         <div class="post-tags-container">
-          <a href="{{ .RelPermalink }}">{{- .Title -}}</a>
+          <a href="{{ .RelPermalink }}">{{- .LinkTitle -}}</a>
           <ul class="post-tags">
             {{ range $page_terms }}
             <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
