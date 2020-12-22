@@ -65,3 +65,8 @@ outputs:
     - HTML
     - RSS
     - JSON # necessary for search
+
+taxonomies:
+  category: categories
+  tag: tags
+  project: projects
