@@ -1,0 +1,5 @@
+{{/* Combines single and list templates. */}}
+
+{{ partial "single.html" . }}
+
+{{ partial "list.html" (dict "ctx" . "StartLevel" 2 "Title" "Posts") }}

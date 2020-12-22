@@ -1,21 +1,24 @@
 {{/*
   `list.html` layout copied as partial (without surrounding `main`)
 
-  Takes dictionary with keys "ctx", "Pages" (optional).
+  Takes dictionary with keys "ctx", "Pages" (optional), "StartLevel" (optional).
 */}}
 
+{{- $title := .Title | default .ctx.Title -}}
+{{- $headingLevel := .StartLevel | default 1 -}}
+{{- $subheadingLevel := add $headingLevel 1 -}}
 {{ with .ctx }}
 {{- if (and .Site.Params.profileMode.enabled .IsHome) }}
 {{- partial "index_profile.html" . }}
 {{- else }} {{/* if not profileMode */}}
 
-{{- if not .IsHome | and .Title }}
+{{- $pages := $.Pages | default (union .RegularPages .Sections) }}
+
+{{- if not .IsHome | and $title | and $pages }}
 <header class="page-header">
-  <h1>{{ .Title }}</h1>
+  {{- printf "<h%d>" $headingLevel | safeHTML -}}{{ $title }}{{- printf "</h%d>" $headingLevel | safeHTML -}}
 </header>
 {{- end }}
-
-{{- $pages := $.Pages | default (union .RegularPages .Sections) }}
 
 {{- if .IsHome }}
 {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
@@ -39,10 +42,10 @@
 <article class="{{ $class }}">
   {{- partial "cover.html" (dict "cxt" . "IsHome" true) }}
   <header class="entry-header">
-    <h2>
+    {{- printf "<h%d>" $subheadingLevel | safeHTML -}}
       {{ .Title }}
       {{- if .Draft }}<div class="entry-isdraft"><sup>&nbsp;&nbsp;[draft]</sup></div>{{- end }}
-    </h2>
+    {{- printf "</h%d>" $subheadingLevel | safeHTML -}}
   </header>
   {{- if (ne .Site.Params.hideSummary true)}}
   <section class="entry-content">
