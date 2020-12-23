@@ -1,5 +1,5 @@
 User-agent: *
-{{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
+{{- if and (hugo.IsProduction | or (eq .Site.Params.env "production")) (not .Site.Params.deployPreview) }}
 Disallow:
 {{- else }}
 Disallow: /
