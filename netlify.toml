@@ -10,8 +10,14 @@
 [context.deploy-preview]
   command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
 
+[context.deploy-preview.environment]
+  HUGO_PARAMS_DEPLOYPREVIEW = "true"
+
 [context.branch-deploy]
   command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+
+[context.branch-deploy.environment]
+  HUGO_PARAMS_DEPLOYPREVIEW = "true"
 
 [[headers]]
   for = "index.xml"
