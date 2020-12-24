@@ -38,3 +38,17 @@ minification is enabled. */
 .post-tags {
   display: inline-block;
 }
+
+/* Styles for `samp` shortcode (inspired by code highlighting styles). */
+.post-single samp {
+  font-family: Menlo, Monaco, 'Courier New', Courier, monospace;
+  font-size: .78em;
+  line-height: 1.5;
+  display: block;
+  margin: auto 0;
+  padding: 10px;
+  color: rgba(255, 255, 255, .8);
+  background: 0 0;
+  border-radius: 0;
+  overflow-x: auto;
+}
