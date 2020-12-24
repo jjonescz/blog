@@ -12,7 +12,7 @@
 {{ $scratch.Add "meta" (slice .)}}
 {{end}}
 
-{{- if not (.Lastmod.Equal .Date) -}}
+{{- if not (eq (dateFormat "2006-01-02" .Lastmod.UTC) (dateFormat "2006-01-02" .Date.UTC)) -}}
 {{- with (partial "updated.html" .) -}}
 {{- $scratch.Add "meta" . -}}
 {{- end -}}
