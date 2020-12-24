@@ -9,6 +9,12 @@ categories:
   - Programming
 projects:
   - ipasim
+cover:
+  image: cover.png
+  alt: Certificate + MSIX package
+  relative: true
+ShowToc: true
+TocOpen: true
 ---
 
 I have a UWP app package released and downloadable through GitHub releases.
