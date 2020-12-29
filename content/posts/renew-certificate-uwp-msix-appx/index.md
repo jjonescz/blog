@@ -1,6 +1,7 @@
 ---
 title: Renewing certificate for UWP package (MSIX, APPX)
-date: 2020-12-29T16:18:20Z
+slug: renew-certificate-uwp-msix-appx
+date: 2020-12-29T15:18:20Z
 summary: How I renewed expired certificate file of released and packaged UWP
   application that prevented users from installing it.
 tags:
