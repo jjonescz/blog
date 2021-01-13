@@ -78,3 +78,7 @@ the first place), you can simply use command inverse to `adb backup`:
 ```bash
 adb restore backup.ab
 ```
+
+Let me know what you think and feel free to ask questions about this post in
+dedicated [thread on
+Reddit](https://www.reddit.com/user/jjones_cz/comments/kwqjg0/extracting_data_from_deployed_apk/).
