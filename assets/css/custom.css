@@ -52,3 +52,10 @@ minification is enabled. */
   border-radius: 0;
   overflow-x: auto;
 }
+
+/* Make vertical screenshots smaller. */
+.screenshot img {
+  max-height: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+}
