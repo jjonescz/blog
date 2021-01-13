@@ -1,7 +1,7 @@
 ---
 title: Extracting data from deployed APK
 slug: extract-deployed-apk-data
-date: 2021-01-06T19:05:23Z
+date: 2021-01-13T21:31:09Z
 summary: How to extract Android application data even if it is not deployed in
   Debug configuration.
 tags:
