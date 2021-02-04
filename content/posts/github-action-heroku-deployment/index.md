@@ -1,7 +1,7 @@
 ---
 title: GitHub Action reporting (Heroku) deployment status
 slug: github-action-heroku-deployment
-date: 2021-01-15T14:20:21Z
+date: 2021-02-04T13:18:48Z
 summary: How to create a GitHub Action that simply fails when status of a
   deployment fails (e.g., deployment reported by Heroku from building a Review
   App).
