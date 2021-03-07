@@ -43,7 +43,6 @@ In the second case, it will display a dialog saying that you are trying to submi
 ## Getting started
 
 I used minimal amount of [jQuery](https://jquery.com/) because we use it in other parts of the project, but in this case it shouldn't be necessary.
-Replacing it with vanilla JavaScript is left as trivial exercise for the reader.
 
 ```ts
 import $ from 'jquery';
@@ -184,7 +183,7 @@ private clearDirty() {
 
 ## Putting it together
 
-Now the method we have been all waiting for.
+And finally let's add a method that will be called to detect changes in a specific element or the whole form, as needed.
 
 ```ts
 /** Auto-detects form's dirtiness. */
