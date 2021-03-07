@@ -1,7 +1,7 @@
 ---
 title: Detecting changes of HTML forms
 slug: detect-html-form-changes
-date: 2021-03-05T20:11:34Z
+date: 2021-03-07T17:02:19Z
 summary: How to automatically detect form changes and prevent users from losing
   entered data or submitting empty forms.
 tags:
