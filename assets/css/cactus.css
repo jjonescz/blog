@@ -1,0 +1,44 @@
+/* Custom styling of cactus.chat comments */
+
+#comments {
+  margin-top: 2rem;
+}
+
+/* Comments heading */
+#comments > small {
+  font-size: 70%;
+}
+#comments > small > a {
+  box-shadow: 0 1px 0 var(--primary);
+}
+
+/* Input styles; inspired by `search.css` */
+.cactus-container input, .cactus-container textarea {
+  padding: 4px 10px;
+  width: 100%;
+  color: var(--primary);
+  font-weight: bold;
+  border: 2px solid var(--tertiary);
+  border-radius: var(--radius);
+}
+.cactus-container input:focus, .cactus-container textarea:focus {
+  border-color: var(--secondary);
+}
+
+/* Login dialog */
+.cactus-container .cactus-login-form {
+  background-color: var(--theme);
+}
+
+/* Buttons */
+.cactus-container button {
+  background-color: var(--border);
+}
+.dark .cactus-container button {
+  color: var(--primary);
+  background-color: var(--entry);
+}
+.dark .cactus-container button:disabled {
+  color: var(--tertiary);
+}
+

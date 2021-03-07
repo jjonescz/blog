@@ -17,6 +17,7 @@ params:
 
   ShowShareButtons: true
   ShowReadingTime: true
+  comments: true
 
   profileMode:
     enabled: true

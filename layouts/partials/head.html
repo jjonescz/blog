@@ -21,6 +21,10 @@
 <meta name="google-site-verification" content="{{ .Site.Params.analytics.google.SiteVerificationTag }}" />
 {{- end}}
 <!-- Styles -->
+{{- if and ($.Site.Params.comments) (ne .Params.comments false) -}}
+{{- /* Comments via cactus.chat (based on matrix.org) */ -}}
+<link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
+{{- end -}}
 {{- $common := (resources.Match "css/*.css") | resources.Concat "assets/css/common.css" }}
 {{- $extended := (resources.Match "css/extended/*.css") | resources.Concat "assets/css/extended.css" }}
 {{- /*  bundle all required css  */}}
