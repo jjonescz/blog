@@ -42,7 +42,8 @@ In the second case, it will display a dialog saying that you are trying to submi
 
 ## Getting started
 
-I used minimal amount of [jQuery](https://jquery.com/) because we use it in other parts of the project, but in this case it shouldn't be necessary.
+I used minimal amount of [jQuery](https://jquery.com/) because we use it in other parts of the project.
+However, in this case it shouldn't be necessary and replacing it with vanilla JavaScript should be easy.
 
 ```ts
 import $ from 'jquery';
@@ -200,7 +201,7 @@ detectChanges(element?: JQuery) {
 }
 ```
 
-Remember, this one is called on page load, but we should also call it whenever some `input` of the given `form` changes.
+Remember, this one is called on page load (we did that in `constructor` of `DirtyFormDetector`), but we should also call it whenever some `input` of the given `form` changes.
 I do it manually as shown below (because every form is a bit different) but I am sure you can easily integrate it into the `DirtyFormDetector` class.
 
 And here is how you actually use our new `DirtyFormDetector` class:
