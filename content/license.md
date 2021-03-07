@@ -2,6 +2,7 @@
 title: License
 hideMeta: true
 disableShare: true
+comments: false
 ---
 
 Content of this blog (text in Markdown files except code fragments) is Copyright Jan Joneš &copy; 2020 &ndash; {{< year >}}, All Rights Reserved.

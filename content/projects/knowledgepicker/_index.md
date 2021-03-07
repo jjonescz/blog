@@ -6,6 +6,7 @@ cover:
   relative: true
 disableShare: true
 disableReadingTime: true
+comments: false
 ---
 
 KnowledgePicker is a community-driven catalog of knowledge. It's awesome.

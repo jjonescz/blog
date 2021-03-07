@@ -2,6 +2,7 @@
 title: Stack
 hideMeta: true
 disableShare: true
+comments: false
 ---
 
 This site is open-source, hosted on [GitHub](https://github.com/jjonescz/blog).

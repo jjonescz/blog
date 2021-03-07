@@ -2,6 +2,7 @@
 title: Privacy
 hideMeta: true
 disableShare: true
+comments: false
 ---
 
 No ads. No tracking. No cookies. Almost no JavaScript (except [Search]({{< relref "search.md" >}}) page and few embedded lines to enable dark/light theme toggling).
