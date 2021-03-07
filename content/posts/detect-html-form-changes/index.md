@@ -187,6 +187,14 @@ private clearDirty() {
 And finally let's add a method that will be called to detect changes in a specific element or the whole form, as needed.
 
 ```ts
+/** Sets dirty state and updates UI appropriately. */
+set(newDirty: boolean) {
+  if (this.dirty === newDirty) return;
+  if (newDirty) this.setDirty();
+  else this.clearDirty();
+  this.dirty = newDirty;
+}
+
 /** Auto-detects form's dirtiness. */
 detectChanges(element?: JQuery) {
   // Check either all elements in the form or just the provided element.
@@ -197,7 +205,7 @@ detectChanges(element?: JQuery) {
   // the whole form, because other elements could be dirty.
   if (!newDirty) newDirty = DirtyFormDetector.isDirty(this.form);
 
-  this.dirty = newDirty;
+  this.set(newDirty);
 }
 ```
 
@@ -218,7 +226,7 @@ form.on('input', 'input, textarea, select', e =>
 );
 form.on('submit', () => {
   // If the form is going to be submitted, disable warning that it's dirty.
-  dirtyForm.dirty = false;
+  dirtyForm.set(false);
 });
 ```
 
@@ -234,7 +242,7 @@ form.on('submit', () => {
       $('#unchangedAlert').modal('show'); // Bootstrap modal
   } else {
     // If the form is going to be submitted, disable warning that it's dirty.
-    dirtyForm.dirty = false;
+    dirtyForm.set(false);
   }
 });
 ```
