@@ -248,3 +248,7 @@ form.on('submit', () => {
 ```
 
 Note that I use [Bootstrap modal](https://getbootstrap.com/docs/4.6/components/modal/) to show the "You are trying to submit unchanged form" warning.
+
+Let me know what you think and feel free to ask questions about this post in
+dedicated [thread on
+Reddit](https://www.reddit.com/user/jjones_cz/comments/lzv5qa/detecting_changes_of_html_forms/).
