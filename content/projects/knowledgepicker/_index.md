@@ -9,5 +9,5 @@ disableReadingTime: true
 comments: false
 ---
 
-KnowledgePicker is a community-driven catalog of knowledge. It's awesome.
+KnowledgePicker is a community-driven catalog of learning resources. It's awesome.
 [Check it out](https://knowledgepicker.com).
