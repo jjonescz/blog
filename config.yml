@@ -44,7 +44,7 @@ params:
     - name: paypal
       url: https://www.paypal.me/jjonescz
     - name: other
-      url: https://jan-a.tech/jan/
+      url: https://knowledgepicker.com/u/jjones
 
 menu:
   main:
