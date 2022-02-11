@@ -141,5 +141,5 @@
 </header>
 
 {{- if and .Site.Params.trackingPixel (hugo.IsProduction | or (eq .Site.Params.env "production")) (not .Site.Params.deployPreview) -}}
-<img src="{{ printf .Site.Params.trackingPixel .RelPermalink }}">
+<img src="{{ printf .Site.Params.trackingPixel .RelPermalink }}" onerror="this.style.display='none'">
 {{- end -}}
