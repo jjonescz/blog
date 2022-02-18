@@ -37,14 +37,12 @@ params:
       url: https://www.linkedin.com/in/jan-jones-cz/
     - name: github
       url: https://github.com/jjonescz
+    - name: reddit
+      url: https://www.reddit.com/user/jjones_cz
     - name: stackoverflow
       url: https://stackoverflow.com/users/9080566/jan-jone%c5%a1
-    - name: twitter
-      url: https://twitter.com/jjonescz
     - name: paypal
       url: https://www.paypal.me/jjonescz
-    - name: other
-      url: https://knowledgepicker.com/u/jjones
 
 menu:
   main:
