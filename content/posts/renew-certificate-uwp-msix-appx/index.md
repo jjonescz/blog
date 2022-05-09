@@ -133,5 +133,3 @@ I have `.msix` package in my example but I believe the same steps would work for
 
 9. That's it.
    Now you can try to install the app package again using `Add-AppDevPackage.ps1` script and it should succeed.
-
-Let me know what you think and feel free to ask questions about this post in dedicated [thread on Reddit](https://www.reddit.com/user/jjones_cz/comments/kmggfj/renewing_certificate_for_uwp_package_msix_appx/).

@@ -124,7 +124,3 @@ Its code is below (you can simply append it to the same file, e.g., `.github/wor
 Note that the presented solution is not limited to Heroku deployments, it should work with any service that publishes deployment statuses to GitHub.
 However, the solution has one limitation (that I am aware of) which I will try to address in some future post.
 Namely, commit hashes are not checked, so if for example deployment succeeds but [Heroku Release Phase](https://devcenter.heroku.com/articles/release-phase) fails, health check succeeds anyway (with previously deployed version of the branch if it exists).
-
-Let me know what you think and feel free to ask questions about this post in
-dedicated [thread on
-Reddit](https://www.reddit.com/user/jjones_cz/comments/lcfihc/github_action_reporting_heroku_deployment_status/).

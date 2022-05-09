@@ -170,6 +170,6 @@ And finally, I have [used](https://github.com/jjonescz/blog/blob/026088ac7a51ec6
 
 I have shown you how I created my blog (hosted for free on Netlify and GitHub). It consists of simple (yet SEO-friendly) static HTML and CSS files (which is everything a fast blog needs). Once configured, it can be even managed by non-programmer thanks to Netlify CMS.
 
-As I continue adding more functionality to the blog (search, comments, PWA, LaTeX math, etc.), I plan to write more detailed blog posts about each addition. Until I add comments, let me know what you think about this post [on Reddit](https://www.reddit.com/user/jjones_cz/comments/kgzu90/fast_static_blog_with_headless_cms_jan_jones/).
+As I continue adding more functionality to the blog (search, comments, PWA, LaTeX math, etc.), I plan to write more detailed blog posts about each addition.
 
-UPDATE: I have added [Cactus.chat](https://cactus.chat/)-based comments recently (see below). I haven't written any post about it yet, but it is very simple to integrate.
+**UPDATE**: I have added [Cactus.chat](https://cactus.chat/)-based comments recently (see below). I haven't written any post about it yet, but it is very simple to integrate.

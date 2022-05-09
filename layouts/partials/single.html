@@ -43,6 +43,10 @@
   {{- end }}
   <div class="post-content">
     {{- partial "anchored_headings.html" .Content -}}
+    {{- if and ($.Site.Params.comments) (ne .Params.comments false) }}
+      Let me know what you think and feel free to ask questions about this post
+      in comments below.
+    {{- end }}
   </div>
   <footer class="post-footer">
     {{ range $tax_term, $tax := .Site.Taxonomies }}
