@@ -15,8 +15,7 @@ categories:
 #   image: cover.png
 #   alt: Prevent user from losing changes in a form
 #   relative: true
-ShowToc: true
-TocOpen: false
+ShowToc: false
 ---
 
 This post summarizes how one can build a [ClickOnce package](https://learn.microsoft.com/en-us/visualstudio/deployment/quickstart-deploy-using-clickonce-folder?view=vs-2022)
