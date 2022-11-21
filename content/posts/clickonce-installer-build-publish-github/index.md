@@ -48,6 +48,8 @@ Assuming you have a WPF application in a GitHub repository.
    to perform only the build step without publishing to GitHub pages).
 
    ```ps1
+   # From https://janjones.me/posts/clickonce-installer-build-publish-github/.
+
    [CmdletBinding(PositionalBinding=$false)]
    param (
        [switch]$OnlyBuild=$false
