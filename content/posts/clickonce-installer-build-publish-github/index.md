@@ -23,13 +23,40 @@ automatically in GitHub Actions and then automatically publish it to GitHub Page
 
 Assuming you have a WPF application in a GitHub repository.
 
-1. Create branch `gh-pages`,
-   enable [GitHub Pages](https://docs.github.com/en/pages/quickstart)
+1. First, create publish profile for ClickOnce package locally in Visual Studio
+   (see [Microsoft docs](https://learn.microsoft.com/en-us/visualstudio/deployment/quickstart-deploy-using-clickonce-folder?view=vs-2022)).
+   Right-click on your project, select Publish and ClickOnce.
+   Leave default options, but set "Install location" as "From a web site",
+   and specify the URL as:
+
+   ```url
+   https://{user}.github.io/{repo}/{app}.application
+   ```
+
+   replacing `{user}` with your GitHub username, `{repo}` with the repository name
+   and `{app}` with your application project name.
+
+   This should create file `Properties/PublishProfiles/ClickOnceProfile.pubxml`.
+   Check it into your repository and publish to your `main` branch,
+   it will be needed by the build script below.
+
+   You don't need to click "Publish",
+   pushing the publish profile (`.pubxml`) file is enough.
+
+2. Create an empty branch `gh-pages` and push it to GitHub:
+
+   ```sh
+   git switch --orphan gh-pages
+   git commit --allow-empty -m "Initial commit"
+   git push -u origin gh-pages
+   ```
+
+3. Enable [GitHub Pages](https://docs.github.com/en/pages/quickstart)
    on your repository (in Settings > Pages)
    and configure them to publish from `gh-pages` branch
    (set folder to root `/`).
 
-2. In your `gh-pages` branch, add `.gitattributes` with the following content:
+4. In your `gh-pages` branch, add `.gitattributes` with the following content:
 
    ```gitattributes
    * -text
@@ -40,7 +67,7 @@ Assuming you have a WPF application in a GitHub repository.
    Also add an empty [`.nojekyll` file](https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/)
    to prevent GitHub from processing your release files before publishing them.
 
-3. In your `main` branch, create `release.ps1` script as below
+5. In your `main` branch, create `release.ps1` script as below
    (don't forget to change the two properties at the beginning marked with "👈").
    Optionally, you can embed this code directly into the GitHub Action in the next step,
    but then you won't be able to run the release locally which might be useful
@@ -55,7 +82,7 @@ Assuming you have a WPF application in a GitHub repository.
        [switch]$OnlyBuild=$false
    )
 
-   $appName = "WpfApplication" # 👈 Replace with your app name.
+   $appName = "WpfApplication" # 👈 Replace with your application project name.
    $projDir = "WpfApplication" # 👈 Replace with your project directory (where .csproj resides).
 
    Set-StrictMode -version 2.0
@@ -150,7 +177,7 @@ Assuming you have a WPF application in a GitHub repository.
    }
    ```
 
-4. Again in your `main` branch,
+6. Again in your `main` branch,
    create a GitHub Action workflow file `.github/workflows/release.yml`:
 
    ```yaml
@@ -179,7 +206,7 @@ Assuming you have a WPF application in a GitHub repository.
            run: ./release.ps1
    ```
 
-5. This will run whenever you [publish a release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
+7. This will run whenever you [publish a release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
    using the GitHub UI or manually push a tag
    (which is what publishing the release does under the hood):
 
@@ -188,12 +215,12 @@ Assuming you have a WPF application in a GitHub repository.
    git push origin v1.0.0
    ```
 
-   When it runs, it builds your app, creates a ClickOnce package,
-   and pushes it to the `gh-pages` branch, so it's available for download at:
+   Note that the script expects the tag to be specified with prefix `v`.
+
+   When the workflow runs, it builds your app, creates a ClickOnce package,
+   and pushes it to the `gh-pages` branch, so it's available for download
+   at the URL you specified in step&nbsp;1:
 
    ```url
    https://{user}.github.io/{repo}/{app}.application
    ```
-
-   (Replace `{user}` with your GitHub username, `{repo}` with the repository name
-   and `{app}` with `$appName` from the `release.ps1` script above.)
