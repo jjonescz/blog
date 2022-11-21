@@ -193,5 +193,5 @@ Assuming you have a WPF application in a GitHub repository.
    https://{user}.github.io/{repo}/{app}.application
    ```
 
-   (Replace `{user}` by your GitHub username, `{repo}` by the repository name
-   and `{app}` by `$appName` from the `release.ps1` script above.)
+   (Replace `{user}` with your GitHub username, `{repo}` with the repository name
+   and `{app}` with `$appName` from the `release.ps1` script above.)
