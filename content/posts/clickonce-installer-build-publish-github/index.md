@@ -24,8 +24,10 @@ automatically in GitHub Actions and then automatically publish it to GitHub Page
 Assuming you have a WPF application in a GitHub repository.
 
 1. Create branch `gh-pages`,
-   [enable GitHub Pages](https://docs.github.com/en/pages/quickstart)
-   and set it to publish from `gh-pages` branch.
+   enable [GitHub Pages](https://docs.github.com/en/pages/quickstart)
+   on your repository (in Settings > Pages)
+   and configure them to publish from `gh-pages` branch
+   (set folder to root `/`).
 
 2. In your `gh-pages` branch, add `.gitattributes` with the following content:
 
@@ -38,10 +40,12 @@ Assuming you have a WPF application in a GitHub repository.
    Also add an empty [`.nojekyll` file](https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/)
    to prevent GitHub from processing your release files before publishing them.
 
-3. In your `main` branch, create `./release.ps1` script as below
+3. In your `main` branch, create `release.ps1` script as below
    (don't forget to change the two properties at the beginning marked with "👈").
-   Optionally, you can embed this code directly into the GitHub Action below,
-   but then you won't be able to run the release locally which might be useful.
+   Optionally, you can embed this code directly into the GitHub Action in the next step,
+   but then you won't be able to run the release locally which might be useful
+   (you can run `./release.ps1 -OnlyBuild` from PowerShell on your machine
+   to perform only the build step without publishing to GitHub pages).
 
    ```ps1
    [CmdletBinding(PositionalBinding=$false)]
@@ -144,7 +148,8 @@ Assuming you have a WPF application in a GitHub repository.
    }
    ```
 
-4. Create a GitHub Action workflow file `.github/workflows/release.yml`:
+4. Again in your `main` branch,
+   create a GitHub Action workflow file `.github/workflows/release.yml`:
 
    ```yaml
    name: Release
