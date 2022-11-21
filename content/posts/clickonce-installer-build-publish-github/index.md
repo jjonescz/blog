@@ -54,7 +54,7 @@ Assuming you have a WPF application in a GitHub repository.
    )
 
    $appName = "WpfApplication" # 👈 Replace with your app name.
-   $projDir = "src/$appName" # 👈 Replace with your project directory.
+   $projDir = "WpfApplication" # 👈 Replace with your project directory (where .csproj resides).
 
    Set-StrictMode -version 2.0
    $ErrorActionPreference = "Stop"
