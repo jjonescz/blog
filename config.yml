@@ -23,7 +23,6 @@ params:
     enabled: true
     imageUrl: "me.jpg"
     imageTitle: "Jan Jones's profile picture"
-    subtitle: "Follow me on [Twitter](https://twitter.com/jjonescz) for new posts."
     buttons:
       - name: Blog
         url: /posts/
