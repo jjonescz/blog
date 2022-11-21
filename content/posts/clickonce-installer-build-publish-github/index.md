@@ -11,10 +11,10 @@ tags:
   - .NET
 categories:
   - DevOps
-# cover:
-#   image: cover.png
-#   alt: Prevent user from losing changes in a form
-#   relative: true
+cover:
+  image: cover.png
+  alt: ClickOnce + WPF + GitHub
+  relative: true
 ShowToc: false
 ---
 
