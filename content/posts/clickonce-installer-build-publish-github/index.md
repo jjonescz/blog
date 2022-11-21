@@ -35,6 +35,8 @@ Assuming you have a WPF application in a GitHub repository.
 
    replacing `{user}` with your GitHub username, `{repo}` with the repository name
    and `{app}` with your application project name.
+   Beware that the URL is case sensitive (so if the app name is `WpfApplication`,
+   the URL could be `https://jjonescz.github.io/wpf-example/WpfApplication.application`).
 
    This should create file `Properties/PublishProfiles/ClickOnceProfile.pubxml`.
    Check it into your repository and publish to your `main` branch,
