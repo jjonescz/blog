@@ -2,15 +2,15 @@
 title: Build and publish ClickOnce installer on GitHub
 slug: clickonce-installer-build-publish-github
 date: 2022-11-21T16:47:00+01:00
-summary: How to automatically detect form changes and prevent users from losing
-  entered data or submitting empty forms.
+summary: How to package a WPF application in GitHub CI with ClickOnce installer,
+  continuously publish it to GitHub pages, and have automatic updates for users.
 tags:
   - ClickOnce
   - WPF
   - Windows
   - .NET
 categories:
-  - Programming
+  - DevOps
 # cover:
 #   image: cover.png
 #   alt: Prevent user from losing changes in a form
@@ -19,7 +19,7 @@ ShowToc: false
 ---
 
 This post summarizes how one can build a [ClickOnce package](https://learn.microsoft.com/en-us/visualstudio/deployment/quickstart-deploy-using-clickonce-folder?view=vs-2022)
-automatically in GitHub Actions and then automatically publish it to GitHub Pages.
+automatically in GitHub Actions with publishing to GitHub Pages.
 
 Assuming you have a WPF application in a GitHub repository.
 
@@ -30,13 +30,10 @@ Assuming you have a WPF application in a GitHub repository.
    and specify the URL as:
 
    ```url
-   https://{user}.github.io/{repo}/{app}.application
+   https://{user}.github.io/{repo}/
    ```
 
-   replacing `{user}` with your GitHub username, `{repo}` with the repository name
-   and `{app}` with your application project name.
-   Beware that the URL is case sensitive (so if the app name is `WpfApplication`,
-   the URL could be `https://jjonescz.github.io/wpf-example/WpfApplication.application`).
+   replacing `{user}` with your GitHub username and `{repo}` with the repository name.
 
    This should create file `Properties/PublishProfiles/ClickOnceProfile.pubxml`.
    Check it into your repository and publish to your `main` branch,
@@ -221,8 +218,17 @@ Assuming you have a WPF application in a GitHub repository.
 
    When the workflow runs, it builds your app, creates a ClickOnce package,
    and pushes it to the `gh-pages` branch, so it's available for download
-   at the URL you specified in step&nbsp;1:
+   at the URL you specified in step&nbsp;1 as file `{app}.application`
+   where `{app}` is the name of your application project:
 
    ```url
    https://{user}.github.io/{repo}/{app}.application
    ```
+
+   Beware that the URL is case sensitive (so if the app name is `WpfApplication`,
+   the URL could be `https://jjonescz.github.io/wpf-example/WpfApplication.application`).
+
+   Now you can provide that URL to your users and let the ClickOnce magic happen.
+   Whenever you publish a new version of the app,
+   it will be automatically downloaded to your users
+   when they open the app (and have an Internet connection).
