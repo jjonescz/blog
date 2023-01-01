@@ -8,7 +8,7 @@ tags:
   - ClickOnce
   - WPF
   - Windows
-  - .NET
+  - dotNET
 categories:
   - DevOps
 cover:
