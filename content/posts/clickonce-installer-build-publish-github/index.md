@@ -21,7 +21,8 @@ ShowToc: false
 This post summarizes how one can build a [ClickOnce package](https://learn.microsoft.com/en-us/visualstudio/deployment/quickstart-deploy-using-clickonce-folder?view=vs-2022)
 automatically in GitHub Actions with publishing to GitHub Pages.
 
-Assuming you have a WPF application in a GitHub repository.
+Assuming you have a WPF application in a GitHub repository
+(see list of real [examples using this method](#real-world-examples) below).
 
 1. First, create publish profile for ClickOnce package locally in Visual Studio
    (see [Microsoft docs](https://learn.microsoft.com/en-us/visualstudio/deployment/quickstart-deploy-using-clickonce-folder?view=vs-2022)).
@@ -232,3 +233,11 @@ Assuming you have a WPF application in a GitHub repository.
    Whenever you publish a new version of the app,
    it will be automatically downloaded to your users
    when they open the app (and have an Internet connection).
+
+## Real-world examples
+
+These are real-world examples of .NET applications
+published using the above method:
+
+- [InOculus](https://github.com/janarez/inoculus):
+  Minimal desktop timer to remind you to get up and relieve eyestrain
