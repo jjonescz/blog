@@ -28,7 +28,7 @@ For hosting I chose Netlify as I have had some experience with it already. If yo
 
 ## Static site generator
 
-With the described setup, you can simply start writing your blog in pure HTML with some CSS styles to give it nice looks, but there is simpler way. You can write your content in Markdown (or rich-text editor as I describe [below](#bonus-headless-cms)) and have it converted to HTML/CSS site (SEO included) at build time. This conversion happens automatically in Netlify whenever you push to `master` branch of your GitHub repository. Netlify provides enough [build minutes for free](https://www.netlify.com/pricing/) to rebuild your blog as often as you manage to write content.
+With the described setup, you can simply start writing your blog in pure HTML with some CSS styles to give it nice looks, but there is simpler way. You can write your content in Markdown (or rich-text editor as I describe [below](#bonus-headless-cms)) and have it converted to HTML/CSS site (SEO included) at build time. This conversion happens automatically in Netlify whenever you push to `main` branch of your GitHub repository. Netlify provides enough [build minutes for free](https://www.netlify.com/pricing/) to rebuild your blog as often as you manage to write content.
 
 There are many [static site generators](https://jamstack.org/generators/) that convert content written in some simple format (usually Markdown) to static HTML website (or sometimes JavaScript single-page app). I chose [Hugo](https://gohugo.io/) which provides lots of functionality out of the box and its builds are blazingly fast.
 
@@ -119,7 +119,7 @@ To create a blog similar to mine, you can either fork [my repository](https://gi
      force = true
    ```
 
-9. By default you get random third-level domain from Netlify (e.g., `something-random.netlify.app`) where your app is available as soon as you push it to `master` and it gets built on Netlify (which is usually very fast with Hugo). You can change it to something more appropriate in your site's settings, although it will still contain `netlify.app` suffix (so you get something like `my-cool-blog.netlify.app`). However, you can also buy your own second-level domain (e.g., `my-cool-blog.com`). I recommend doing that directly through Netlify, it is the easiest way and you also get free SSL certificate (for HTTPS) immediately setup. Go to [your Netlify account](https://app.netlify.com/), select your site, click on “Domain settings” > “Add custom domain” and Netlify will guide you through the purchase (or transferring existing domain).
+9. By default you get random third-level domain from Netlify (e.g., `something-random.netlify.app`) where your app is available as soon as you push it to `main` and it gets built on Netlify (which is usually very fast with Hugo). You can change it to something more appropriate in your site's settings, although it will still contain `netlify.app` suffix (so you get something like `my-cool-blog.netlify.app`). However, you can also buy your own second-level domain (e.g., `my-cool-blog.com`). I recommend doing that directly through Netlify, it is the easiest way and you also get free SSL certificate (for HTTPS) immediately setup. Go to [your Netlify account](https://app.netlify.com/), select your site, click on “Domain settings” > “Add custom domain” and Netlify will guide you through the purchase (or transferring existing domain).
 
 10. You can add new post using Hugo command:
 
