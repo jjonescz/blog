@@ -50,7 +50,8 @@ To create a blog similar to mine, you can either fork [my repository](https://gi
 
 1. [Install Hugo](https://gohugo.io/getting-started/installing).
 
-2. Create new Hugo site (see [Hugo Quick Start guide](https://gohugo.io/getting-started/quick-start/)):
+2. Create new Hugo site (see [Hugo Quick Start guide](https://gohugo.io/getting-started/quick-start/)).
+   In the following commands, you can replace `blog` with any name you want.
 
    ```shell
    hugo new site blog
