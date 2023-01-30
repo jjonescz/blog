@@ -21,6 +21,7 @@ params:
 
   profileMode:
     enabled: true
+    subtitle: "Software Engineer at Microsoft, working on C# and Razor compilers."
     imageUrl: "me.jpg"
     imageTitle: "Jan Jones's profile picture"
     buttons:
