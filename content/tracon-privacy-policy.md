@@ -6,6 +6,7 @@ disableShare: true
 comments: false
 robotsNoIndex: true
 searchHidden: true
+rssHidden: true
 ---
 
 We don't collect any personal data.

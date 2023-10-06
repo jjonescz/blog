@@ -3,6 +3,7 @@ title: Stack
 hideMeta: true
 disableShare: true
 comments: false
+rssHidden: true
 ---
 
 This site is open-source, hosted on [GitHub](https://github.com/jjonescz/blog).
