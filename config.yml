@@ -37,6 +37,8 @@ params:
       url: https://www.linkedin.com/in/jan-jones-cz/
     - name: github
       url: https://github.com/jjonescz
+    - name: bluesky
+      url: https://bsky.app/profile/janjones.bsky.social
     - name: reddit
       url: https://www.reddit.com/user/jjones_cz
     - name: stackoverflow
