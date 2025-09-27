@@ -38,7 +38,7 @@ params:
     - name: github
       url: https://github.com/jjonescz
     - name: bluesky
-      url: https://bsky.app/profile/janjones.bsky.social
+      url: https://bsky.app/profile/janjones.me
     - name: reddit
       url: https://www.reddit.com/user/jjones_cz
     - name: stackoverflow
